@@ -4,6 +4,10 @@
  * 1717051051 - Patar Martua Doli Siahaan
  * https://github.com/patarshn/Sorting-Cpp/edit/master/Sorting.cpp
 **/
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+
 
 int sizeOf(int A[]){
 	int size = 0;
