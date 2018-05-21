@@ -4,7 +4,7 @@
 //1717051037    Wildan Mutaqin
 //1717051051    Patar Martua Doli Siahaan
 
-
+//SELECTION SORTING
 
 #include<iostream>
 using namespace std;
@@ -38,10 +38,10 @@ int main ()
 	cout<<"sesudah sorting \n";
 	for(a=1;a<=n;a++)
 	{
-	//	head=a;
+	
 		for(b=a+1;b<=n;b++)
 		{
-			//if (A[b]<A[head]) head=b;
+			
 			if(A[a]>A[b]){int temp;temp=A[a];A[a]=A[b];A[b]=temp;}
 			
 		}
