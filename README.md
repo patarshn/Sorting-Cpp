@@ -10,6 +10,10 @@
 using namespace std;
 
 
+#include<iostream>
+using namespace std;
+
+
 int main ()
 { //selection sort
 	int A[100];
@@ -34,11 +38,11 @@ int main ()
 	cout<<"sesudah sorting \n";
 	for(a=1;a<=n;a++)
 	{
-		head=a;
+	//	head=a;
 		for(b=a+1;b<=n;b++)
 		{
-			if (A[b]<A[head]) head=b;
-			if(head!=a){int temp;temp=A[a];A[a]=A[head];A[head]=temp;}
+			//if (A[b]<A[head]) head=b;
+			if(A[a]>A[b]){int temp;temp=A[a];A[a]=A[b];A[b]=temp;}
 			
 		}
 		cout<<A[a]<<" ";
