@@ -25,6 +25,40 @@ void bubbleMerge(int A[],int a,int b){
 	}
 }
 
+void swapMerge(int A[],int a,int b,int c){
+	int np = c-a+1;
+	int pn = b-c;
+	int Kiri[np+1], Kanan[pn+1];
+	for(int i=0;i<np;i++){
+		Kiri[i] = A[a+i];}
+	for(int j=0;j<pn;j++){
+		Kanan[j]= A[c+j+1];}
+	int i=0,j=0,k=0;
+	while (i!=np && j!=pn){
+		if(Kiri[i] > Kanan[j]){
+			A[a+k] = Kanan[j];
+			j++;
+			}
+		else{
+			A[a+k] = Kiri[i];
+			i++;
+			}
+			k++;
+		}
+		
+	while (i!=np){
+		A[a+k] = Kiri[i];
+		i++;
+		k++;
+		}
+		
+	while (j!=pn){
+		A[a+k] = Kanan[j];
+		j++;
+		k++;
+		}
+	}
+
 //selectMerge(array,awal,akhir)
 void selectMerge(int A[],int a,int b){
 	
@@ -49,8 +83,9 @@ void mergeSort(int A[],int a,int b){
 		int c = (a+b)/2;
 		mergeSort(A,a,c);
 		mergeSort(A,c+1,b);
-		bubbleMerge(A,a,b);
+		//bubbleMerge(A,a,b);
 		//selectMerge(A,a,b);
+		swapMerge(A,a,b,c);
 	}
 		}	
 
