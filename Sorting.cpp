@@ -5,7 +5,6 @@
  * https://github.com/patarshn/Sorting-Cpp/edit/master/Sorting.cpp
 **/
 #include<iostream>
-#include<cstdlib>
 using namespace std;
 
 
@@ -138,8 +137,16 @@ void cetak(int A[]){
 
 
 int main(){
-	int A[4] = {3,1,4,2};
-	mergeSort(A,0,4);
+	int A[8] = {9,7,5,4,8,1,10};
+	mergeSort(A,0,6);
 	cetak(A);
+	cout<<endl;
+	int B[5] = {1,6,2,3,7};
+	selectSort(B);
+	cetak(B);
+	cout<<endl;
+	int C[5] = {1051,1045,310,2708,12};
+	bubbleSort(C);
+	cetak(C);
 
 }
