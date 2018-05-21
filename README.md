@@ -47,3 +47,20 @@ int main ()
 		}
 		cout<<A[a]<<" ";
 	}
+
+
+cout<<"Dengan  bubble Sorting \n";
+	for(a=1;a<=n;a++)
+	{
+		for(b=(a+1);b<=n;b++)
+		{
+			if(A[a]>A[b])
+			{
+				int temp;
+				temp=A[a];
+				A[a]=A[b];
+				A[b]=temp;
+			}
+		}
+		cout<<A[a]<<" ";
+	}
