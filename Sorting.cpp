@@ -25,6 +25,24 @@ void bubbleMerge(int A[],int a,int b){
 	}
 }
 
+//selectMerge(array,awal,akhir)
+void selectMerge(int A[],int a,int b){
+	
+	for(int i=a;i<b;i++){
+		int min = i;
+		for(int j=i+1;j<=b;j++){
+			if(A[min] > A[j]){
+				min = j;
+				}
+			}
+		if(A[i] > A[min]){
+			int tmp = A[i];
+				A[i] = A[min];
+				A[min] = tmp;
+			}	
+		}
+	}
+
 //bubbleSort(array,awal,akhir)
 void mergeSort(int A[],int a,int b){
 	if(b>a){
@@ -32,7 +50,8 @@ void mergeSort(int A[],int a,int b){
 		mergeSort(A,a,c);
 		mergeSort(A,c+1,b);
 		bubbleMerge(A,a,b);
-		}
+		//selectMerge(A,a,b);
+	}
 		}	
 
 
