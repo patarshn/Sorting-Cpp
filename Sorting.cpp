@@ -34,15 +34,19 @@ void bubbleSort(int *A){
 void selectSort(int *A){
 	int n = sizeOf(A);
 	for(int i=0;i<n-1;i++){
+		int min = i;
 		for(int j=i;j<n;j++){
-			if(A[i] > A[j]){
-				int tmp = A[i];
-				A[i] = A[j];
-				A[j] = tmp;
+			if(A[min] > A[j]){
+				min = j;
 				}
 			}
+		if(A[i] > A[min]){
+			int tmp = A[i];
+				A[i] = A[min];
+				A[min] = tmp;
+			}
 		}
-	}	
+	}		
 
 //bubbleMerge(array,awal,akhir)
 void bubbleMerge(int A[],int a,int b){
