@@ -5,6 +5,42 @@
  * https://github.com/patarshn/Sorting-Cpp/edit/master/Sorting.cpp
 **/
 
+int sizeOf(int A[]){
+	int size = 0;
+	for(int i=0;A[i];i++){
+		size++;
+		}
+	return size;
+	}
+
+//Bubble Sorting
+void bubbleSort(int *A){
+	int n = sizeOf(A);
+	for(int i=0;i<n;i++){
+		for(int j=0;j<n;j++){
+			if(A[j] < A[j+1]){
+				int tmp = A[j];
+				A[j] = A[j+1];
+				A[j+1] = tmp;
+				}
+			}
+		}
+	}
+
+//Selection Sorting
+void selectSort(int *A){
+	int n = sizeOf(A);
+	for(int i=0;i<n-1;i++){
+		for(int j=i;j<n;j++){
+			if(A[i] > A[j]){
+				int tmp = A[i];
+				A[i] = A[j];
+				A[j] = tmp;
+				}
+			}
+		}
+	}	
+
 //bubbleMerge(array,awal,akhir)
 void bubbleMerge(int A[],int a,int b){
 	if(b>0){
